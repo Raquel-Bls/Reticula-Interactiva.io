@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Retícula Interactiva</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    
+
+</head>
+
+
+<!-- ***  CUERPO DEL DOCUMENTO  *** -->
+<body>
+
+   <%- include('../partials/header') %>
+
+
+  <div class = "grid-container">
+ 
+  <!-- *** NAVBAR *** -->
+
+
+  <!-- *** SIDEBAR *** -->
+  <aside class="sidebar">
+    
+      <div id = "sidebar">
+
+        <h5 class="etiquetas">Número de control:</h5>
+        <p class="datos-usuario">18130583</p>
+
+        <h5 class="etiquetas">Nombre:</h5>
+        <p class="datos-usuario"><%= (typeof name != "undefined" ? name : "")%> </p>
+
+        <h5 class="etiquetas">Carrera:</h5>
+        <p class="datos-usuario">Ingenieria en sistemas computacionales</p>
+
+        <h5 class="etiquetas">Semestre:</h5>
+        <p class="datos-usuario">8</p>
+
+        <h5 class="etiquetas">Especialidad:</h5>
+        <p class="datos-usuario">Desarrollo web</p>
+
+        <h5 class="etiquetas">Creditos obtenidos:</h5>
+        <p class="datos-usuario">230</p>
+
+        <h5 class="etiquetas">Creditos seleccionados:</h5>
+        <p class="datos-usuario">5</p>
+
+        <h5 class="etiquetas">Creditos cursados especialidad:</h5>
+        <p class="datos-usuario">10</p>
+
+        <h5 class="etiquetas">Creditos restantes especialidad:</h5>
+        <p class="datos-usuario">11</p>
+
+      </div>
+      
+    
+  </aside>
+
+  <!-- *** RETICULA *** -->
+  <div id="Tabla"> 
+    <main>
+      <div id="Elements">
+        <p>
+          
+        </p>
+      </div>
+    </main>
+  </div>
+</div>
+  <!-- *** FOOTER *** -->
+  <%- include('../partials/footer') %>
+
+  <!-- *** DIALOG *** -->
+  <div id="Dialog" aria-labelledby="DialogName" role="dialog" tabindex="-1" hidden>
+    <div role="document" > <!-- For VO bug -->
+      <h2 id="DialogName">Element Detail</h2>
+      <button type="button" id="DialogClose">Close</button>
+      <!-- Need a region role becase this has a tabindex so keyboard users can scroll the box -->
+      <div id="ElementDetail" tabindex="0" role="region" aria-labelledby="DialogName">
+        
+      </div>
+    </div>
+  </div>
+  
+  <!-- *** OVERLAY *** -->
+  <div id="Overlay">
+
+  </div>
+</body>
+
+<script  src="./javascript/reticulainteractiva.js"></script>
+
+</html>
